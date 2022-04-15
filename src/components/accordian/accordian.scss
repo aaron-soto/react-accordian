@@ -1,0 +1,61 @@
+@import '../../styles/variables';
+
+.accordian {
+    background-color: $white;
+    
+    width: 380px;
+    border: 3px solid $gray;
+    
+    &_header {
+        padding: 1.5rem 1.5rem;
+        font-size: 18px;
+        font-weight: 800;
+    }
+    
+    &_item {
+        border-top: 1px solid $gray;
+        cursor: pointer;
+        
+        
+        &_header {
+            padding: 1rem 1.5rem;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            &:hover {
+                background-color: $lightgray;
+            }
+
+            .arrow {
+                border-left: 7px solid transparent;
+                border-right: 7px solid transparent;
+                border-top: 9px solid $gray;
+                height: 0;
+                width: 0;
+                transition: all .3s ease-in-out;
+
+                &.opened {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        
+        &_sub {
+            border-top: 1px solid $gray;
+            padding: 1rem 1.5rem;
+            list-style: none;
+            &:hover {
+                background-color: $lightgray;
+            }
+            
+            &_title {
+                color: $blue;
+                font-weight: 600;
+                font-size: 18px;
+            }
+        }
+    }
+}
